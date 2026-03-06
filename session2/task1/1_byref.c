@@ -36,6 +36,8 @@ int main(void) {
  * @param dy the y delta
  */
 void move_point(int *x, int *y, int dx, int dy) {
+  *x=*x+dx
+  *y=*y+dy
   // update the coordinates by the given delta
   // i.e. (x+dx, y+dy)
 }

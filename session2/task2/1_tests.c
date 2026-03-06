@@ -37,9 +37,19 @@ void test_obvious_palindrome(void) {
  * 1. Call TEST_CHECK(condition) to verify a condition
  * 2. Use TEST_MSG("message") to explain what went wrong if it fails
  * ============================================================ */
+void test_single_char(void){
+    TEST_CHECK(is_palindrome('a')==1);
+    TEST_MSG("Expected 'a' to be a palindrome");
+}
 
-
-
+void test_empty_string(void){
+    TEST_CHECK(is_palindrome('')==1);
+    TEST_MSG("Expected '' to be a palindrome");
+}
+void test_non_palindromes(void){
+    TEST_CHECK(is_palindrome("hello", "world")==1);
+    TEST_MSG("Expected 'hello', 'world' to be a palindrome");
+}
 /* ============================================================
  * TEST_LIST - Register all your tests here
  *
